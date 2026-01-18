@@ -24,7 +24,7 @@ let package = Package(
         .library(name: .rfc1034, targets: [.rfc1034])
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-standards/swift-rfc-1035.git", from: "0.0.1"),
+        .package(path: "../swift-rfc-1035"),
     ],
     targets: [
         .target(
