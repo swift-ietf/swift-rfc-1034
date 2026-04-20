@@ -18,15 +18,15 @@ struct RFC1034Tests {
 
     @Suite("Name Tests")
     struct NameTests {
-        @Test("Name is alias for RFC_1035.Domain")
-        func nameIsAlias() throws {
+        @Test
+        func `Name is alias for RFC_1035.Domain`() throws {
             let name = try RFC_1034.Name("www.example.com")
             #expect(name.rawValue == "www.example.com")
             #expect(name.tld?.rawValue == "com")
         }
 
-        @Test("Label is alias for RFC_1035.Domain.Label")
-        func labelIsAlias() throws {
+        @Test
+        func `Label is alias for RFC_1035.Domain.Label`() throws {
             let label = try RFC_1034.Label("example")
             #expect(label.rawValue == "example")
         }
@@ -34,8 +34,8 @@ struct RFC1034Tests {
 
     @Suite("Query Type Tests")
     struct QueryTypeTests {
-        @Test("Standard query types have correct values")
-        func standardTypes() {
+        @Test
+        func `Standard query types have correct values`() {
             #expect(RFC_1034.Query.RecordType.a.rawValue == 1)
             #expect(RFC_1034.Query.RecordType.ns.rawValue == 2)
             #expect(RFC_1034.Query.RecordType.cname.rawValue == 5)
@@ -48,8 +48,8 @@ struct RFC1034Tests {
             #expect(RFC_1034.Query.RecordType.opt.rawValue == 41)
         }
 
-        @Test("Query-only types have correct values")
-        func queryOnlyTypes() {
+        @Test
+        func `Query-only types have correct values`() {
             #expect(RFC_1034.Query.RecordType.axfr.rawValue == 252)
             #expect(RFC_1034.Query.RecordType.any.rawValue == 255)
         }
@@ -57,8 +57,8 @@ struct RFC1034Tests {
 
     @Suite("Query Class Tests")
     struct QueryClassTests {
-        @Test("Standard classes have correct values")
-        func standardClasses() {
+        @Test
+        func `Standard classes have correct values`() {
             #expect(RFC_1034.Query.Class.internet.rawValue == 1)
             #expect(RFC_1034.Query.Class.csnet.rawValue == 2)
             #expect(RFC_1034.Query.Class.chaos.rawValue == 3)
@@ -69,8 +69,8 @@ struct RFC1034Tests {
 
     @Suite("Resource TTL Tests")
     struct ResourceTTLTests {
-        @Test("Standard TTL values")
-        func standardTTLs() {
+        @Test
+        func `Standard TTL values`() {
             #expect(RFC_1034.Resource.TTL.zero.rawValue == 0)
             #expect(RFC_1034.Resource.TTL.oneMinute.rawValue == 60)
             #expect(RFC_1034.Resource.TTL.fiveMinutes.rawValue == 300)
@@ -79,8 +79,8 @@ struct RFC1034Tests {
             #expect(RFC_1034.Resource.TTL.oneWeek.rawValue == 604800)
         }
 
-        @Test("TTL is comparable")
-        func ttlComparable() {
+        @Test
+        func `TTL is comparable`() {
             #expect(RFC_1034.Resource.TTL.oneMinute < RFC_1034.Resource.TTL.oneHour)
             #expect(RFC_1034.Resource.TTL.oneDay > RFC_1034.Resource.TTL.oneHour)
         }
@@ -88,8 +88,8 @@ struct RFC1034Tests {
 
     @Suite("Zone SOA Tests")
     struct ZoneSOATests {
-        @Test("SOA can be created")
-        func createSOA() throws {
+        @Test
+        func `SOA can be created`() throws {
             let soa = RFC_1034.Zone.SOA(
                 primaryNameServer: try RFC_1034.Name("ns1.example.com"),
                 responsibleMailbox: try RFC_1034.Name("admin.example.com"),
