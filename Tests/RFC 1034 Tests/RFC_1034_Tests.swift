@@ -93,7 +93,7 @@ struct RFC1034Tests {
             let soa = RFC_1034.Zone.SOA(
                 primaryNameServer: try RFC_1034.Name("ns1.example.com"),
                 responsibleMailbox: try RFC_1034.Name("admin.example.com"),
-                serial: 2024010101,
+                serial: 2_024_010_101,
                 refresh: 3600,
                 retry: 600,
                 expire: 604800,
@@ -101,7 +101,7 @@ struct RFC1034Tests {
             )
 
             #expect(soa.primaryNameServer.rawValue == "ns1.example.com")
-            #expect(soa.serial == 2024010101)
+            #expect(soa.serial == 2_024_010_101)
             #expect(soa.refresh == 3600)
         }
     }
