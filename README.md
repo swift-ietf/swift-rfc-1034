@@ -1,35 +1,3 @@
 # swift-rfc-1034
 
-![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
-
-The DNS name space, resource records, and domain-name concepts of RFC 1034.
-
-## Standard Reference
-
-- **RFC**: 1034
-- **Title**: Domain Names — Concepts and Facilities
-
-## Installation
-
-Add the package to your `Package.swift` dependencies:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/swift-ietf/swift-rfc-1034.git", from: "0.0.1")
-]
-```
-
-Add the product to a target that needs it:
-
-```swift
-.target(
-    name: "YourTarget",
-    dependencies: [
-        .product(name: "RFC 1034", package: "swift-rfc-1034")
-    ]
-)
-```
-
-## License
-
-Apache 2.0. See [LICENSE.md](LICENSE.md).
+Use this package when you need the shared DNS vocabulary of RFC 1034 in your own types: domain names and labels, query types and classes, resource record TTLs, and the data of a zone's SOA record. Start from `RFC_1034.Name`, `RFC_1034.Query.RecordType`, `RFC_1034.Query.Class`, `RFC_1034.Resource.TTL` and `RFC_1034.Zone.SOA`. The package holds values only. For the DNS wire format, use swift-rfc-1035. For AAAA records and ip6.arpa names, use swift-rfc-3596. To resolve names, use swift-domain-name-system.
