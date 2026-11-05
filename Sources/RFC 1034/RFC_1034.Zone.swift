@@ -32,7 +32,7 @@ extension RFC_1034.Zone {
     /// record at the zone apex.
     ///
     /// The SOA record contains administrative information about the zone.
-    public struct SOA: Sendable, Hashable, Codable {
+    public struct SOA: Sendable, Hashable {
         /// Primary name server for this zone
         public let primaryNameServer: RFC_1034.Name
 
