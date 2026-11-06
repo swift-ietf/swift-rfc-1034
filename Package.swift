@@ -27,7 +27,7 @@ let package = Package(
         .testTarget(
             name: "RFC 1034 Tests",
             dependencies: [
-                "RFC 1034"
+                .target(name: "RFC 1034")
             ]
         ),
     ],
