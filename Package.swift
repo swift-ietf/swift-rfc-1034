@@ -2,10 +2,6 @@
 
 import PackageDescription
 
-extension String {
-    static let rfc1034: Self = "RFC 1034"
-}
-
 let package = Package(
     name: "swift-rfc-1034",
     platforms: [
@@ -37,10 +33,6 @@ let package = Package(
     ],
     swiftLanguageModes: [.v6]
 )
-
-extension String {
-    var tests: Self { self + " Tests" }
-}
 
 for target in package.targets where ![.system, .binary, .plugin, .macro].contains(target.type) {
     let ecosystem: [SwiftSetting] = [
