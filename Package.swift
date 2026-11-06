@@ -6,11 +6,6 @@ extension String {
     static let rfc1034: Self = "RFC 1034"
 }
 
-extension Target.Dependency {
-    static var rfc1034: Self { .target(name: .rfc1034) }
-    static var rfc1035: Self { .product(name: "RFC 1035", package: "swift-rfc-1035") }
-}
-
 let package = Package(
     name: "swift-rfc-1034",
     platforms: [
@@ -18,7 +13,7 @@ let package = Package(
         .iOS(.v27),
         .tvOS(.v27),
         .watchOS(.v27),
-        .visionOS(.v27)
+        .visionOS(.v27),
     ],
     products: [
         .library(name: "RFC 1034", targets: ["RFC 1034"])
@@ -30,13 +25,13 @@ let package = Package(
         .target(
             name: "RFC 1034",
             dependencies: [
-                .rfc1035
+                .product(name: "RFC 1035", package: "swift-rfc-1035")
             ]
         ),
         .testTarget(
             name: "RFC 1034 Tests",
             dependencies: [
-                "RFC 1034",
+                "RFC 1034"
             ]
         ),
     ],
