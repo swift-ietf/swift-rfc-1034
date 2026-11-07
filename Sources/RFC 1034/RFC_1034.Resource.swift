@@ -1,20 +1,3 @@
-// ===----------------------------------------------------------------------===//
-//
-// Copyright (c) 2025 Coen ten Thije Boonkkamp
-// Licensed under Apache License v2.0
-//
-// See LICENSE.txt for license information
-// See CONTRIBUTORS.txt for the list of project contributors
-//
-// SPDX-License-Identifier: Apache-2.0
-//
-// ===----------------------------------------------------------------------===//
-
-// RFC_1034.Resource.swift
-// swift-rfc-1034
-//
-// RFC 1034 Section 3.6: Resource Records
-
 extension RFC_1034 {
     /// Resource record namespace
     ///
@@ -29,8 +12,6 @@ extension RFC_1034 {
     /// - RDATA: Resource-specific data
     public enum Resource {}
 }
-
-// MARK: - Type Aliases
 
 extension RFC_1034.Resource {
     /// Resource record class

@@ -1,20 +1,3 @@
-// ===----------------------------------------------------------------------===//
-//
-// Copyright (c) 2025 Coen ten Thije Boonkkamp
-// Licensed under Apache License v2.0
-//
-// See LICENSE.txt for license information
-// See CONTRIBUTORS.txt for the list of project contributors
-//
-// SPDX-License-Identifier: Apache-2.0
-//
-// ===----------------------------------------------------------------------===//
-
-// RFC_1034.Query.RecordType.swift
-// swift-rfc-1034
-//
-// RFC 1034 Section 3.7: Queries
-
 extension RFC_1034.Query {
     /// Query type (QTYPE)
     ///
@@ -50,8 +33,6 @@ extension RFC_1034.Query {
     }
 }
 
-// MARK: - Standard Types
-
 extension RFC_1034.Query.RecordType {
     /// A (1): IPv4 host address
     public static let a = Self(__unchecked: (), rawValue: 1)
@@ -83,8 +64,6 @@ extension RFC_1034.Query.RecordType {
     /// OPT (41): EDNS option (RFC 6891)
     public static let opt = Self(__unchecked: (), rawValue: 41)
 }
-
-// MARK: - Query-Only Types
 
 extension RFC_1034.Query.RecordType {
     /// AXFR (252): Zone transfer request

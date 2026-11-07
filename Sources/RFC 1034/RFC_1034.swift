@@ -1,24 +1,3 @@
-// ===----------------------------------------------------------------------===//
-//
-// Copyright (c) 2025 Coen ten Thije Boonkkamp
-// Licensed under Apache License v2.0
-//
-// See LICENSE.txt for license information
-// See CONTRIBUTORS.txt for the list of project contributors
-//
-// SPDX-License-Identifier: Apache-2.0
-//
-// ===----------------------------------------------------------------------===//
-
-// RFC_1034.swift
-// swift-rfc-1034
-//
-// RFC 1034: Domain Names - Concepts and Facilities (November 1987)
-// https://www.rfc-editor.org/rfc/rfc1034.html
-//
-// This package implements the DNS conceptual model defined by RFC 1034.
-// Implementation details for the DNS protocol are in RFC 1035.
-
 /// RFC 1034: Domain Names - Concepts and Facilities
 ///
 /// This namespace contains types representing the DNS conceptual model

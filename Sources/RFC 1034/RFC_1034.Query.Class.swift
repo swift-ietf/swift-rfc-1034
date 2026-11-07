@@ -1,20 +1,3 @@
-// ===----------------------------------------------------------------------===//
-//
-// Copyright (c) 2025 Coen ten Thije Boonkkamp
-// Licensed under Apache License v2.0
-//
-// See LICENSE.txt for license information
-// See CONTRIBUTORS.txt for the list of project contributors
-//
-// SPDX-License-Identifier: Apache-2.0
-//
-// ===----------------------------------------------------------------------===//
-
-// RFC_1034.Query.Class.swift
-// swift-rfc-1034
-//
-// RFC 1034 Section 3.7: Queries
-
 extension RFC_1034.Query {
     /// Query class (QCLASS)
     ///
@@ -35,8 +18,6 @@ extension RFC_1034.Query {
         }
     }
 }
-
-// MARK: - Standard Classes
 
 extension RFC_1034.Query.Class {
     /// IN (1): Internet
