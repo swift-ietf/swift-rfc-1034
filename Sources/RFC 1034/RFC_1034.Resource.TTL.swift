@@ -17,10 +17,12 @@ extension RFC_1034.Resource {
         init(__unchecked: Void, rawValue: UInt32) {
             self.rawValue = rawValue
         }
+    }
+}
 
-        public static func < (lhs: Self, rhs: Self) -> Bool {
-            lhs.rawValue < rhs.rawValue
-        }
+extension RFC_1034.Resource.TTL {
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        lhs.rawValue < rhs.rawValue
     }
 }
 
