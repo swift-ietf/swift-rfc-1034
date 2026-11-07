@@ -13,11 +13,11 @@
 import Testing
 @testable import RFC_1034
 
-@Suite("RFC 1034 DNS Concepts Tests")
-struct RFC1034Tests {
+@Suite
+struct `RFC 1034 DNS Concepts Tests` {
 
-    @Suite("Name Tests")
-    struct NameTests {
+    @Suite
+    struct `Name Tests` {
         @Test
         func `Name is alias for RFC_1035.Domain`() throws {
             let name = try RFC_1034.Name("www.example.com")
@@ -32,8 +32,8 @@ struct RFC1034Tests {
         }
     }
 
-    @Suite("Query Type Tests")
-    struct QueryTypeTests {
+    @Suite
+    struct `Query Type Tests` {
         @Test
         func `Standard query types have correct values`() {
             #expect(RFC_1034.Query.RecordType.a.rawValue == 1)
@@ -55,8 +55,8 @@ struct RFC1034Tests {
         }
     }
 
-    @Suite("Query Class Tests")
-    struct QueryClassTests {
+    @Suite
+    struct `Query Class Tests` {
         @Test
         func `Standard classes have correct values`() {
             #expect(RFC_1034.Query.Class.internet.rawValue == 1)
@@ -67,8 +67,8 @@ struct RFC1034Tests {
         }
     }
 
-    @Suite("Resource TTL Tests")
-    struct ResourceTTLTests {
+    @Suite
+    struct `Resource TTL Tests` {
         @Test
         func `Standard TTL values`() {
             #expect(RFC_1034.Resource.TTL.zero.rawValue == 0)
@@ -86,8 +86,8 @@ struct RFC1034Tests {
         }
     }
 
-    @Suite("Zone SOA Tests")
-    struct ZoneSOATests {
+    @Suite
+    struct `Zone SOA Tests` {
         @Test
         func `SOA can be created`() throws {
             let soa = RFC_1034.Zone.SOA(
