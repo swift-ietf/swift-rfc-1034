@@ -13,9 +13,15 @@
 import Testing
 @testable import RFC_1034
 
-@Suite
-struct `RFC 1034 DNS Concepts Tests` {
+enum `RFC_1034 Tests` {}
 
+extension `RFC_1034 Tests` {
+    @Suite
+    struct `RFC 1034 DNS Concepts Tests` {
+    }
+}
+
+extension `RFC_1034 Tests`.`RFC 1034 DNS Concepts Tests` {
     @Suite
     struct `Name Tests` {
         @Test
