@@ -1,4 +1,3 @@
-
 extension RFC_1034.Zone {
     /// Start of Authority (SOA) record data
     ///
