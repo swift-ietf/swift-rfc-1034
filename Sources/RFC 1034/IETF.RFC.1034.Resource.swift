@@ -1,4 +1,4 @@
-extension RFC_1034 {
+extension IETF.RFC.`1034` {
     /// Resource record namespace
     ///
     /// Contains types related to DNS resource records as defined in
@@ -13,14 +13,14 @@ extension RFC_1034 {
     public enum Resource {}
 }
 
-extension RFC_1034.Resource {
+extension IETF.RFC.`1034`.Resource {
     /// Resource record class
     ///
     /// Identical to query class for most purposes.
-    public typealias Class = RFC_1034.Query.Class
+    public typealias Class = IETF.RFC.`1034`.Query.Class
 
     /// Resource record type
     ///
     /// Identical to query type for standard types.
-    public typealias RecordType = RFC_1034.Query.RecordType
+    public typealias RecordType = IETF.RFC.`1034`.Query.RecordType
 }

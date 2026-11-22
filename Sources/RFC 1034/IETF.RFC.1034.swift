@@ -1,3 +1,4 @@
+public import IETF_RFC
 /// RFC 1034: Domain Names - Concepts and Facilities
 ///
 /// This namespace contains types representing the DNS conceptual model
@@ -39,4 +40,6 @@
 /// - [RFC 1034](https://www.rfc-editor.org/rfc/rfc1034)
 /// - [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035) for implementation details
 /// - ``RFC_1035`` for the DNS implementation specification
-public enum RFC_1034 {}
+extension IETF.RFC {
+    public enum `1034` {}
+}

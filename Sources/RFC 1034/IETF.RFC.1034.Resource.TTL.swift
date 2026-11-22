@@ -1,4 +1,4 @@
-extension RFC_1034.Resource {
+extension IETF.RFC.`1034`.Resource {
     /// Time-to-live value in seconds
     ///
     /// Per RFC 1034 Section 3.6, TTL is a 32-bit unsigned integer
@@ -20,13 +20,13 @@ extension RFC_1034.Resource {
     }
 }
 
-extension RFC_1034.Resource.TTL {
+extension IETF.RFC.`1034`.Resource.TTL {
     public static func < (lhs: Self, rhs: Self) -> Bool {
         lhs.rawValue < rhs.rawValue
     }
 }
 
-extension RFC_1034.Resource.TTL {
+extension IETF.RFC.`1034`.Resource.TTL {
     /// Zero TTL - do not cache
     public static let zero = Self(__unchecked: (), rawValue: 0)
 

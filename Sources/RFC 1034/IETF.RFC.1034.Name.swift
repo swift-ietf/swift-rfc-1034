@@ -1,6 +1,6 @@
 public import RFC_1035
 
-extension RFC_1034 {
+extension IETF.RFC.`1034` {
     /// Domain name type
     ///
     /// A domain name is a hierarchical identifier in the DNS namespace.
@@ -23,11 +23,11 @@ extension RFC_1034 {
     /// let name = try RFC_1034.Name("www.example.com")
     /// print(name.tld) // "com"
     /// ```
-    public typealias Name = RFC_1035.Domain
+    public typealias Name = IETF.RFC.`1035`.Domain
 
     /// Label type
     ///
     /// A single component of a domain name.
     /// This is a type alias to ``RFC_1035.Domain.Label``.
-    public typealias Label = RFC_1035.Domain.Label
+    public typealias Label = IETF.RFC.`1035`.Domain.Label
 }

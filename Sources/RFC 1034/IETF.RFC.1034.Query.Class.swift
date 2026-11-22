@@ -1,4 +1,4 @@
-extension RFC_1034.Query {
+extension IETF.RFC.`1034`.Query {
     /// Query class (QCLASS)
     ///
     /// Specifies the class of the query.
@@ -19,7 +19,7 @@ extension RFC_1034.Query {
     }
 }
 
-extension RFC_1034.Query.Class {
+extension IETF.RFC.`1034`.Query.Class {
     /// IN (1): Internet
     public static let internet = Self(__unchecked: (), rawValue: 1)
 

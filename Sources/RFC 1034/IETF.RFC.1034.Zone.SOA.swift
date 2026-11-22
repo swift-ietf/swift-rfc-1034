@@ -1,4 +1,4 @@
-extension RFC_1034.Zone {
+extension IETF.RFC.`1034`.Zone {
     /// Start of Authority (SOA) record data
     ///
     /// Per RFC 1034 Section 4.2.1, every zone must have exactly one SOA
@@ -7,10 +7,10 @@ extension RFC_1034.Zone {
     /// The SOA record contains administrative information about the zone.
     public struct SOA: Sendable, Hashable {
         /// Primary name server for this zone
-        public let primaryNameServer: RFC_1034.Name
+        public let primaryNameServer: IETF.RFC.`1034`.Name
 
         /// Email address of the zone administrator (@ replaced with .)
-        public let responsibleMailbox: RFC_1034.Name
+        public let responsibleMailbox: IETF.RFC.`1034`.Name
 
         /// Zone serial number (incremented on each change)
         public let serial: UInt32
@@ -28,8 +28,8 @@ extension RFC_1034.Zone {
         public let minimum: UInt32
 
         public init(
-            primaryNameServer: RFC_1034.Name,
-            responsibleMailbox: RFC_1034.Name,
+            primaryNameServer: IETF.RFC.`1034`.Name,
+            responsibleMailbox: IETF.RFC.`1034`.Name,
             serial: UInt32,
             refresh: UInt32,
             retry: UInt32,

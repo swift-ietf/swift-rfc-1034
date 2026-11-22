@@ -1,4 +1,4 @@
-extension RFC_1034 {
+extension IETF.RFC.`1034` {
     /// Zone namespace
     ///
     /// Contains types related to DNS zones as defined in RFC 1034 Section 4.2.
@@ -8,5 +8,5 @@ extension RFC_1034 {
     public enum Zone {}
 }
 
-extension RFC_1034.Zone {
+extension IETF.RFC.`1034`.Zone {
 }

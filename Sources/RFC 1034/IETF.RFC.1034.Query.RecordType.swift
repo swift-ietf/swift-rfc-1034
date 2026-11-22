@@ -1,4 +1,4 @@
-extension RFC_1034.Query {
+extension IETF.RFC.`1034`.Query {
     /// Query type (QTYPE)
     ///
     /// Specifies the type of resource record being requested.
@@ -33,7 +33,7 @@ extension RFC_1034.Query {
     }
 }
 
-extension RFC_1034.Query.RecordType {
+extension IETF.RFC.`1034`.Query.RecordType {
     /// A (1): IPv4 host address
     public static let a = Self(__unchecked: (), rawValue: 1)
 
@@ -65,7 +65,7 @@ extension RFC_1034.Query.RecordType {
     public static let opt = Self(__unchecked: (), rawValue: 41)
 }
 
-extension RFC_1034.Query.RecordType {
+extension IETF.RFC.`1034`.Query.RecordType {
     /// AXFR (252): Zone transfer request
     public static let axfr = Self(__unchecked: (), rawValue: 252)
 
