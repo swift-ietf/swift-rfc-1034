@@ -1,4 +1,5 @@
 public import IETF_RFC
+
 /// RFC 1034: Domain Names - Concepts and Facilities
 ///
 /// This namespace contains types representing the DNS conceptual model
