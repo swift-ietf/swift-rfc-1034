@@ -16,14 +16,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-ietf/swift-rfc.git", branch: "main"),
-        .package(url: "https://github.com/swift-ietf/swift-rfc-1035.git", branch: "main")
+        .package(url: "https://github.com/swift-ietf/swift-rfc-1035.git", branch: "main"),
     ],
     targets: [
         .target(
             name: "RFC 1034",
             dependencies: [
                 .product(name: "IETF RFC", package: "swift-rfc"),
-                .product(name: "RFC 1035", package: "swift-rfc-1035")
+                .product(name: "RFC 1035", package: "swift-rfc-1035"),
             ]
         ),
         .testTarget(
